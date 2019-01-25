@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79A5AD03-8C09-46B1-A906-AA5FFFEF3646}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sette_e_mezzo_Gruppo_1</RootNamespace>
+    <AssemblyName>Sette e mezzo_Gruppo-1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="PartitaFinita.xaml.cs">
+      <DependentUpon>PartitaFinita.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Puntata.xaml.cs">
+      <DependentUpon>Puntata.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AggiuntaGiocatori.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AggiuntaGiocatori.xaml.cs">
+      <DependentUpon>AggiuntaGiocatori.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NuovoGioco.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartitaFinita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Puntata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NuovoGioco.xaml.cs">
+      <DependentUpon>NuovoGioco.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Carte\01_basto.png" />
+    <Resource Include="Carte\01_coppe.png" />
+    <Resource Include="Carte\01_denar.png" />
+    <Resource Include="Carte\01_spade.png" />
+    <Resource Include="Carte\02_basto.png" />
+    <Resource Include="Carte\02_coppe.png" />
+    <Resource Include="Carte\02_denar.png" />
+    <Resource Include="Carte\02_spade.png" />
+    <Resource Include="Carte\03_basto.png" />
+    <Resource Include="Carte\03_coppe.png" />
+    <Resource Include="Carte\03_denar.png" />
+    <Resource Include="Carte\03_spade.png" />
+    <Resource Include="Carte\04_basto.png" />
+    <Resource Include="Carte\04_coppe.png" />
+    <Resource Include="Carte\04_denar.png" />
+    <Resource Include="Carte\04_spade.png" />
+    <Resource Include="Carte\05_basto.png" />
+    <Resource Include="Carte\05_coppe.png" />
+    <Resource Include="Carte\05_denar.png" />
+    <Resource Include="Carte\05_spade.png" />
+    <Resource Include="Carte\06_basto.png" />
+    <Resource Include="Carte\06_coppe.png" />
+    <Resource Include="Carte\06_denar.png" />
+    <Resource Include="Carte\06_spade.png" />
+    <Resource Include="Carte\07_basto.png" />
+    <Resource Include="Carte\07_coppe.png" />
+    <Resource Include="Carte\07_denar.png" />
+    <Resource Include="Carte\07_spade.png" />
+    <Resource Include="Carte\08_basto.png" />
+    <Resource Include="Carte\08_coppe.png" />
+    <Resource Include="Carte\08_denar.png" />
+    <Resource Include="Carte\08_spade.png" />
+    <Resource Include="Carte\09_basto.png" />
+    <Resource Include="Carte\09_coppe.png" />
+    <Resource Include="Carte\09_denar.png" />
+    <Resource Include="Carte\09_spade.png" />
+    <Resource Include="Carte\10_basto.png" />
+    <Resource Include="Carte\10_coppe.png" />
+    <Resource Include="Carte\10_denar.png" />
+    <Resource Include="Carte\10_spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Giocatori\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

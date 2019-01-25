@@ -1,0 +1,22 @@
+﻿<Window x:Class="Sette_e_mezzo_Gruppo_1.PartitaFinita"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sette_e_mezzo_Gruppo_1"
+        mc:Ignorable="d"
+        Title="PartitaFinita" Height="284.874" Width="658.823">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="X" HorizontalAlignment="Left" Margin="292,13,0,0" VerticalAlignment="Top" Width="52" Background="Red"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="10,12,0,0" TextWrapping="Wrap" Text="Lucio" VerticalAlignment="Top" Width="207"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="292,103,0,0" VerticalAlignment="Top" Width="52" Background="Red"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="10,102,0,0" TextWrapping="Wrap" Text="Erri" VerticalAlignment="Top" Width="207"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="292,193,0,0" VerticalAlignment="Top" Width="52" Background="Red"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="10,192,0,0" TextWrapping="Wrap" Text="Baldu" VerticalAlignment="Top" Width="207"/>
+        <Button Content="Nuovo Gioco" HorizontalAlignment="Center" Margin="403,86,43,103" VerticalAlignment="Center" Width="205" Height="65"/>
+
+    </Grid>
+</Window>
