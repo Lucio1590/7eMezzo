@@ -60,12 +60,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Carta.cs" />
+    <Compile Include="Giocatore.cs" />
+    <Compile Include="Mazziere.cs" />
     <Compile Include="PartitaFinita.xaml.cs">
       <DependentUpon>PartitaFinita.xaml</DependentUpon>
     </Compile>
     <Compile Include="Puntata.xaml.cs">
       <DependentUpon>Puntata.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tavolo.cs" />
     <Page Include="AggiuntaGiocatori.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

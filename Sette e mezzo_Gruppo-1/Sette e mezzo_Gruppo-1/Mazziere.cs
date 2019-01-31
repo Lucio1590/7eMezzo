@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
-    class Mazziere 
+    class Mazziere : Giocatore
     {
+        public Mazziere(string nick): base(nick)
+        {
 
+        }
     }
 }
