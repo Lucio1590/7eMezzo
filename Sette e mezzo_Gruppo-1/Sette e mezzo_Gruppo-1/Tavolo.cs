@@ -15,6 +15,8 @@ namespace Sette_e_mezzo_Gruppo_1
         {
             _giocatori = new List<Giocatore>();
             _mazziere = m;
+       
+        
         }
         /// <summary>
         /// Metodo che viene richiamato con l'avvio di una nuova partita,
