@@ -10,12 +10,15 @@ namespace Sette_e_mezzo_Gruppo_1
     {
         private int _valore;
         private Segno _segno;
-        public enum Segno { coppe, bastoni, denara, spade };
+        private string _path;
+        public enum Segno { c, b, d, s };
 
-        public Carta(int v, Segno s)
+
+        public Carta(int v, Segno s, string path)
         {
             _valore = v;
             _segno = s;
+            _path = path;
         }
     }
 }
