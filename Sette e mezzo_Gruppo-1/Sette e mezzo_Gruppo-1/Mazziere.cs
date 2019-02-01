@@ -34,6 +34,7 @@ namespace Sette_e_mezzo_Gruppo_1
                         break;
                 }
                 carta = new Carta(i, segno, "Carte/" + i.ToString() + segno.ToString() + ".png");
+                carte.Add(carta);
             }
         }        
     }
