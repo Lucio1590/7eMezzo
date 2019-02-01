@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\daniele.balducci\Desktop\Sette E Mezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\obj\Debug\
+C:\Users\daniele.balducci\Desktop\Sette E Mezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\obj\Release\
 Sette_e_mezzo_Gruppo_1
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\daniele.balducci\Desktop\Sette E Mezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\App.xaml
 51900568298
 
-171278190888
+13-1549752288
 15525033140
 AggiuntaGiocatori.xaml;MainWindow.xaml;NuovoGioco.xaml;PartitaFinita.xaml;Puntata.xaml;
 

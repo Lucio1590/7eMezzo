@@ -11,7 +11,7 @@ namespace Sette_e_mezzo_Gruppo_1
         private string _nick;
         private int _soldi;
         private int _puntata;
-        private List<Carta> _carte;
+        public List<Carta> _carte;
 
         public Giocatore(string nick, int soldi = 100)
         {
