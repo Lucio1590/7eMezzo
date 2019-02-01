@@ -40,5 +40,21 @@ namespace Sette_e_mezzo_Gruppo_1
             //richiama cambio mazziere 
             CambiaMazziere();
         }
+        /// <summary>
+        /// Metodo di rimozione di un giocatore
+        /// </summary>
+        /// <returns></returns>
+        public void RimuoviGiocatore(Giocatore g)
+        {
+            _giocatori.Remove(g);
+        }
+        /// <summary>
+        /// Metodo di Aggiunta di un giocatore
+        /// </summary>
+        /// <param name="g"></param>
+        public void AggiungiGiocatore(Giocatore g)
+        {
+            _giocatori.Remove(g);
+        }
     }
 }
