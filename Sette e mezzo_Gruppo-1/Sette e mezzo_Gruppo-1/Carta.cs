@@ -17,7 +17,7 @@ namespace Sette_e_mezzo_Gruppo_1
         public Carta(int v, Segno s, string path)
         {
             _valore = v;
-            _segno = s;//cia
+            _segno = s;//cia0
             _path = path;
         }
     }
