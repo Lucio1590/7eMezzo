@@ -13,16 +13,14 @@ namespace Sette_e_mezzo_Gruppo_1
         private string _percorsoImmagineCarta;
 
         public string PercorsoImmagineCarta { get => _percorsoImmagineCarta; set => _percorsoImmagineCarta = value; }
-        public int Valore { get => _valore; set => _valore = value; }
-        internal Segno Segno1 { get => _segno; set => _segno = value; }
 
         public enum Segno { c, b, d, s };
 
 
         public Carta(int v, Segno s, string path)
         {
-            Valore = v;
-            Segno1 = s;
+            _valore = v;
+            _segno = s;
             PercorsoImmagineCarta = path;
         }
     }
