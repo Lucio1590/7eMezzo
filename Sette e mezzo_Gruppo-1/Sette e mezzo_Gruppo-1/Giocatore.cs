@@ -13,6 +13,9 @@ namespace Sette_e_mezzo_Gruppo_1
         private int _puntata;
         public List<Carta> _carte;
 
+        public int Soldi { get => _soldi; set => _soldi = value; }
+        public int Puntata { get => _puntata; set => _puntata = value; }
+
         public Giocatore(string nick, int soldi = 100)
         {
             _nick = nick;

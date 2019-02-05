@@ -11,10 +11,9 @@ namespace Sette_e_mezzo_Gruppo_1
         List<Giocatore> _giocatori;
         Mazziere _mazziere;
 
-        public Tavolo(Mazziere m)
+        public Tavolo()
         {
             _giocatori = new List<Giocatore>();
-            _mazziere = m;
        
         
         }
@@ -55,6 +54,11 @@ namespace Sette_e_mezzo_Gruppo_1
         public void AggiungiGiocatore(Giocatore g)
         {
             _giocatori.Remove(g);
+        }
+
+        public void CambiaMazziere()
+        {
+            
         }
     }
 }
