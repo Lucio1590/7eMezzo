@@ -8,14 +8,12 @@ namespace Sette_e_mezzo_Gruppo_1
 {
     class Tavolo
     {
-        List<Giocatore> _giocatori;
+        Giocatore [] _giocatori;
         Mazziere _mazziere;
 
         public Tavolo()
         {
-            _giocatori = new List<Giocatore>();
-       
-        
+            _giocatori = new Giocatore[11];
         }
         /// <summary>
         /// Metodo che viene richiamato con l'avvio di una nuova partita,
@@ -45,20 +43,47 @@ namespace Sette_e_mezzo_Gruppo_1
         /// <returns></returns>
         public void RimuoviGiocatore(Giocatore g)
         {
-            _giocatori.Remove(g);
+            for(int i=0; i<_giocatori.Length; i++)
+            {
+                if (_giocatori[i] == g)
+                {
+                    _giocatori[i] = null;
+                }
+            }
         }
         /// <summary>
         /// Metodo di Aggiunta di un giocatore
         /// </summary>
         /// <param name="g"></param>
-        public void AggiungiGiocatore(Giocatore g)
+        public void AggiungiGiocatore(Giocatore g, int pos)
         {
-            _giocatori.Remove(g);
+            _giocatori[pos] = g;
         }
 
         public void CambiaMazziere()
         {
-            
+            for(int i=0; i<_giocatori.Length; i++)
+            {
+                if(_giocatori[i] is Mazziere)
+                {
+                    Giocatore aus;
+                    for(int j=0; j<i; j++)
+                    {
+                        if (j == 0)
+                        {
+                            _giocatori[_giocatori.Length - 1] = _giocatori[j];
+                        }
+                        else
+                        {
+                            aus = _giocatori[j - 1];
+                            _giocatori[j - 1] = _giocatori[j];
+                            _giocatori[j] = null;
+                        }
+                    }
+                    break;
+                }
+            }
         }
+        
     }
 }
