@@ -8,10 +8,10 @@ namespace Sette_e_mezzo_Gruppo_1
 {
     class Mazziere : Giocatore
     {
-        public List<Carta> carte;
+        public List<Carta> _carte;
         public Mazziere(string nick):base(nick)
         {
-
+            _carte = new List<Carta>();
         }
 
         private void CostruisciListaCarte()
@@ -34,7 +34,7 @@ namespace Sette_e_mezzo_Gruppo_1
                         break;
                 }
                 carta = new Carta(i, segno, "Carte/" + i.ToString() + segno.ToString() + ".png");
-                carte.Add(carta);
+                _carte.Add(carta);
             }
         }        
     }
