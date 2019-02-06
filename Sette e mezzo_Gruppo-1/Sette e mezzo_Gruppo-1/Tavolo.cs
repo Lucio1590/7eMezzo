@@ -59,6 +59,9 @@ namespace Sette_e_mezzo_Gruppo_1
         {
             _giocatori[pos] = g;
         }
+        /// <summary>
+        /// Metodo di cambio del mazziere e di slittamento di tutti i giocatori all'interno dell'array
+        /// </summary>
 
         public void CambiaMazziere()
         {

@@ -12,7 +12,7 @@ namespace Sette_e_mezzo_Gruppo_1
         private int _soldi;
         private int _puntata;
         public List<Carta> _carte;
-
+        //proprietà utili nel cambio mazziere e nell'azzeramento della puntata
         public string Nick { get => _nick; set => _nick= value; }
         public int Soldi { get => _soldi; set => _soldi = value; }
         public int Puntata { get => _puntata; set => _puntata = value; }

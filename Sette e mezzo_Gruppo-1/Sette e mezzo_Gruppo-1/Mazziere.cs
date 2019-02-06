@@ -14,7 +14,7 @@ namespace Sette_e_mezzo_Gruppo_1
             CostruisciListaCarte();
         }
 
-        public Mazziere(string nick, int soldi) : base(nick, soldi)
+        public Mazziere(string nick, int soldi) : base(nick, soldi) //costruttore secondario per il cambio mazziere
         {
             CostruisciListaCarte();
         }
