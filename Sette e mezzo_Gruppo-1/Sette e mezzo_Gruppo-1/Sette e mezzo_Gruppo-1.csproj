@@ -133,7 +133,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Giocatori\" />
+    <Resource Include="Carte\Retro.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Carte\10b.png" />
@@ -170,6 +170,9 @@
     <Resource Include="Carte\9c.png" />
     <Resource Include="Carte\9d.png" />
     <Resource Include="Carte\9s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Giocatori\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

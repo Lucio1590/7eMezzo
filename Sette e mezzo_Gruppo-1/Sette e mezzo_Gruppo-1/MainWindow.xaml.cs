@@ -24,5 +24,10 @@ namespace Sette_e_mezzo_Gruppo_1
         {
             InitializeComponent();
         }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
