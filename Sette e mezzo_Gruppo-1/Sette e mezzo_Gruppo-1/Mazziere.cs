@@ -11,9 +11,13 @@ namespace Sette_e_mezzo_Gruppo_1
         public List<Carta> carte;
         public Mazziere(string nick):base(nick)
         {
-
+            CostruisciListaCarte();
         }
 
+        public Mazziere(string nick, int soldi) : base(nick, soldi)
+        {
+            CostruisciListaCarte();
+        }
         private void CostruisciListaCarte()
         {
             Carta.Segno segno = Carta.Segno.b;

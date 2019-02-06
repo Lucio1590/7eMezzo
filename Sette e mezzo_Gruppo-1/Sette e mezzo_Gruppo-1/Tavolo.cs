@@ -66,18 +66,39 @@ namespace Sette_e_mezzo_Gruppo_1
             {
                 if(_giocatori[i] is Mazziere)
                 {
-                    Giocatore aus;
+                    Giocatore aus=null;
                     for(int j=0; j<i; j++)
                     {
                         if (j == 0)
                         {
+                            aus = _giocatori[_giocatori.Length - 1];
                             _giocatori[_giocatori.Length - 1] = _giocatori[j];
                         }
                         else
                         {
-                            aus = _giocatori[j - 1];
                             _giocatori[j - 1] = _giocatori[j];
                             _giocatori[j] = null;
+                        }
+                    }
+                    if (i != _giocatori.Length - 1)
+                    {
+                        Mazziere m = new Mazziere(_giocatori[i+1].Nick, _giocatori[i+1].Soldi);
+                        Giocatore g = new Giocatore(_giocatori[i].Nick, _giocatori[i].Soldi);
+                        _giocatori[i] = m;
+                        _giocatori[i - 1] = g;
+                    }
+                    else
+                    {
+                        Mazziere m = new Mazziere(_giocatori[0].Nick, _giocatori[0].Soldi);
+                        Giocatore g = new Giocatore(_giocatori[i].Nick, _giocatori[i].Soldi);
+                        _giocatori[_giocatori.Length] = m;
+                        _giocatori[i - 1] = g;
+                    }
+                    for(int j=i+1; j<_giocatori.Length; j++)
+                    {
+                        if (j == _giocatori.Length - 1 && aus!=null)
+                        {
+                            _giocatori[j] = aus;
                         }
                     }
                     break;
