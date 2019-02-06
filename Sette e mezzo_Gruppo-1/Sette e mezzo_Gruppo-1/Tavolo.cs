@@ -88,6 +88,7 @@ namespace Sette_e_mezzo_Gruppo_1
                         Mazziere m = new Mazziere(_giocatori[i+1].Nick, _giocatori[i+1].Soldi);
                         Giocatore g = new Giocatore(_giocatori[i].Nick, _giocatori[i].Soldi);
                         _giocatori[i] = m;
+                        _mazziere = m;
                         _giocatori[i - 1] = g;
                     }
                     else
@@ -95,6 +96,7 @@ namespace Sette_e_mezzo_Gruppo_1
                         Mazziere m = new Mazziere(_giocatori[0].Nick, _giocatori[0].Soldi);
                         Giocatore g = new Giocatore(_giocatori[i].Nick, _giocatori[i].Soldi);
                         _giocatori[_giocatori.Length] = m;
+                        _mazziere = m;
                         _giocatori[i - 1] = g;
                     }
                     for(int j=i+1; j<_giocatori.Length; j++)
@@ -108,6 +110,12 @@ namespace Sette_e_mezzo_Gruppo_1
                 }
             }
         }
-        
+
+        public void AssegnaCartaAGiocatore(Giocatore g)
+        {
+            g.AccettaCarta(_mazziere.Carte[0]);
+            _mazziere.Carte[0] = null;//fare remove carta in mazziere
+        }
+        //fine Funzione
     }
 }
