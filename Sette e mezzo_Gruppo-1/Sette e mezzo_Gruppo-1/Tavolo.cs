@@ -111,9 +111,20 @@ namespace Sette_e_mezzo_Gruppo_1
             }
         }
 
-        public void AssegnaCartaAGiocatore(Giocatore g)
+        public void AssegnaValoreAReDiDenara(double v, Giocatore g)
         {
-            g.AccettaCarta(_mazziere.DaiCarta());
+            g._reDiDenara = v;
+        }
+
+        public bool AssegnaCartaAGiocatore(Giocatore g)
+        {
+            if (g.AccettaCartaAndGetReDenara(_mazziere.DaiCarta()))
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
         }
         //fine Funzione
     }

@@ -11,6 +11,7 @@ namespace Sette_e_mezzo_Gruppo_1
         private string _nick;
         private int _soldi;
         private int _puntata;
+        public double _reDiDenara;
         public List<Carta> _carte;
         //proprietà utili nel cambio mazziere e nell'azzeramento della puntata
         public string Nick { get => _nick; set => _nick= value; }
@@ -22,11 +23,20 @@ namespace Sette_e_mezzo_Gruppo_1
             Nick = nick;
             Soldi = soldi;
             _carte = new List<Carta>();
+            _reDiDenara = 0.5;
         }
 
-        public void AccettaCarta(Carta c)
+        public bool AccettaCartaAndGetReDenara(Carta c)
         {
             _carte.Add(c);
+            if(c.Segno1.ToString().Equals("d") && c.Valore == 10)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         
         public bool SforaLimite()
@@ -34,12 +44,23 @@ namespace Sette_e_mezzo_Gruppo_1
             return true;
         }
 
-        public float GetPunteggioTotale()
+        public double GetPunteggioTotale()
         {
-            float tot = 0;
+            double tot = 0;
             for(int i=0; i<_carte.Count; i++)
             {
-                
+                if (_carte[i].Valore == 10 && _carte[i].Segno1.ToString().Equals("d"))
+                {
+                    tot += _reDiDenara;
+                }
+                else if (_carte[i].Valore <8)
+                {
+                    tot += _carte[i].Valore;
+                }
+                else
+                {
+                    tot += 0.5;
+                }
             }
             return tot;
         }
