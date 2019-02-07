@@ -41,7 +41,14 @@ namespace Sette_e_mezzo_Gruppo_1
         
         public bool SforaLimite()
         {
-            return true;
+            if (GetPunteggioTotale() > 7.5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public double GetPunteggioTotale()

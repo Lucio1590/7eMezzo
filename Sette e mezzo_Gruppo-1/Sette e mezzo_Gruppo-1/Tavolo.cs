@@ -14,6 +14,10 @@ namespace Sette_e_mezzo_Gruppo_1
         public Tavolo()
         {
             _giocatori = new Giocatore[11];
+            foreach(Giocatore g in _giocatori)
+            {
+                g = null;
+            }
         }
         /// <summary>
         /// Metodo che viene richiamato con l'avvio di una nuova partita,
@@ -124,6 +128,42 @@ namespace Sette_e_mezzo_Gruppo_1
             }else
             {
                 return false;
+            }
+        }
+
+        public int GetSommaPuntate()
+        {
+            int tot = 0;
+            foreach(Giocatore g in _giocatori)
+            {
+                if (g != null)
+                {
+                    tot += g.Puntata;
+                }
+            }
+            return tot;
+        }
+
+        public void AssegnaVincita()
+        {
+            double max = 0;
+            int indexMax = 0;
+            for(int i=0; i<_giocatori.Length; i++)
+            {
+                if (_giocatori[i] != null)
+                {
+                    if (_giocatori[i].GetPunteggioTotale() > max && !_giocatori[i].SforaLimite())
+                    {
+                        max = _giocatori[i].GetPunteggioTotale();
+                    }else if(_giocatori[i].GetPunteggioTotale() == max && !_giocatori[i].SforaLimite())
+                    {
+                        if(_giocatori[i]._carte.Count > _giocatori[indexMax]._carte.Count)
+                        {
+                            indexMax = i;
+
+                        }
+                    }
+                }
             }
         }
         //fine Funzione
