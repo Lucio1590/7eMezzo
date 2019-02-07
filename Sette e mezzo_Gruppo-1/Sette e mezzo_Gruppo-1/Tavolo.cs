@@ -113,8 +113,7 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public void AssegnaCartaAGiocatore(Giocatore g)
         {
-            g.AccettaCarta(_mazziere.Carte[0]);
-            _mazziere.Carte[0] = null;//fare remove carta in mazziere
+            g.AccettaCarta(_mazziere.DaiCarta());
         }
         //fine Funzione
     }

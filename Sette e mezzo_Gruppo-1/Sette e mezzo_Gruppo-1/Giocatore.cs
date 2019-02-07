@@ -26,8 +26,22 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public void AccettaCarta(Carta c)
         {
-
+            _carte.Add(c);
         }
         
+        public bool SforaLimite()
+        {
+            return true;
+        }
+
+        public float GetPunteggioTotale()
+        {
+            float tot = 0;
+            for(int i=0; i<_carte.Count; i++)
+            {
+                
+            }
+            return tot;
+        }
     }
 }

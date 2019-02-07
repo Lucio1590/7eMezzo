@@ -43,6 +43,13 @@ namespace Sette_e_mezzo_Gruppo_1
                 carta = new Carta(i, segno, "Carte/" + i.ToString() + segno.ToString() + ".png");
                 Carte.Add(carta);
             }
-        }        
+        }
+
+        public Carta DaiCarta()
+        {
+            Carta c = _carte[0];
+            _carte.Remove(_carte[0]);
+            return c;
+        }
     }
 }
