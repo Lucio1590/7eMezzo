@@ -23,7 +23,7 @@ namespace Sette_e_mezzo_Gruppo_1
             Nick = nick;
             Soldi = soldi;
             _carte = new List<Carta>();
-            _reDiDenara = 0.5;
+            _reDiDenara = 0;
         }
 
         public bool AccettaCartaAndGetReDenara(Carta c)

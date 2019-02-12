@@ -16,7 +16,7 @@ namespace Sette_e_mezzo_Gruppo_1
             _giocatori = new Giocatore[11];
             foreach(Giocatore g in _giocatori)
             {
-                g = null;
+                g.Puntata = null;
             }
         }
         /// <summary>
@@ -146,6 +146,7 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public void AssegnaVincita()
         {
+            List<Giocatore> _vincitori=new List<Giocatore>();
             double max = 0;
             int indexMax = 0;
             for(int i=0; i<_giocatori.Length; i++)
@@ -155,15 +156,30 @@ namespace Sette_e_mezzo_Gruppo_1
                     if (_giocatori[i].GetPunteggioTotale() > max && !_giocatori[i].SforaLimite())
                     {
                         max = _giocatori[i].GetPunteggioTotale();
+                        indexMax = i;
                     }else if(_giocatori[i].GetPunteggioTotale() == max && !_giocatori[i].SforaLimite())
                     {
-                        if(_giocatori[i]._carte.Count > _giocatori[indexMax]._carte.Count)
+                        if(_giocatori[i]._carte.Count < _giocatori[indexMax]._carte.Count)
                         {
                             indexMax = i;
-
+                        }
+                        else if(_giocatori[i]._carte.Count == _giocatori[indexMax]._carte.Count && _giocatori[i]._reDiDenara!=0)
+                        {
+                            indexMax = i;
+                        }
+                        else if(_giocatori[i]._carte.Count == _giocatori[indexMax]._carte.Count && _giocatori[indexMax]._reDiDenara == 0)
+                        {
+                            _vincitori.Add(_giocatori[i]);
                         }
                     }
                 }
+            }
+            _vincitori.Add(_giocatori[indexMax]);
+            int tot = 0;
+            tot = GetSommaPuntate();
+            for(int i = 0; i < _vincitori.Count; i++)
+            {
+                _vincitori[i].Puntata = tot / _vincitori.Count;
             }
         }
         //fine Funzione
