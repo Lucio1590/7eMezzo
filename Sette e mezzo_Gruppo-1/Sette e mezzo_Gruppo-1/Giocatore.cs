@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
-    class Giocatore
+    class Giocatore : IComparable<Giocatore>
     {
         private string _nick;
         private int _soldi;
@@ -70,6 +70,22 @@ namespace Sette_e_mezzo_Gruppo_1
                 }
             }
             return tot;
+        }
+
+        public int CompareTo(Giocatore other)
+        {
+            if(other.Puntata==this.Puntata)
+            {
+                return 0;
+            }
+            else if(other.Puntata<this.Puntata)
+            {
+                return -1;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }

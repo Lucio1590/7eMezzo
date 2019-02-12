@@ -182,6 +182,17 @@ namespace Sette_e_mezzo_Gruppo_1
                 _vincitori[i].Puntata = tot / _vincitori.Count;
             }
         }
+
+        public List<Giocatore> GetClassifica()
+        {
+            List<Giocatore> _classifica = new List<Giocatore>();
+            foreach(Giocatore g in _giocatori)
+            {
+                _classifica.Add(g);
+            }
+            _classifica.Sort();
+            return _classifica;
+        }
         //fine Funzione
     }
 }
