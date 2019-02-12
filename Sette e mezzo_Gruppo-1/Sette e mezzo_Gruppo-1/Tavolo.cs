@@ -183,6 +183,18 @@ namespace Sette_e_mezzo_Gruppo_1
             }
         }
 
+        public void ModificaPuntata(Giocatore g, int puntata)
+        {
+            for(int i=0; i<_giocatori.Length; i++)
+            {
+                if (_giocatori[i].Nick.Equals(g.Nick))
+                {
+                    _giocatori[i] = g;
+                    _giocatori[i].Puntata = puntata;
+                }
+            }
+        }
+
         public List<Giocatore> GetClassifica()
         {
             List<Giocatore> _classifica = new List<Giocatore>();
