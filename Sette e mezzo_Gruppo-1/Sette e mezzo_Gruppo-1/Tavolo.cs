@@ -16,7 +16,7 @@ namespace Sette_e_mezzo_Gruppo_1
             _giocatori = new Giocatore[11];
             foreach(Giocatore g in _giocatori)
             {
-                g.Puntata = null;
+                g = null;
             }
         }
         /// <summary>
@@ -30,12 +30,19 @@ namespace Sette_e_mezzo_Gruppo_1
         {
             foreach (Giocatore g in _giocatori)
             {
-                //azzera puntata
-                g.Puntata = 0;
-                //togli carte dai giocatori 
-                foreach (Carta c in g._carte)
+                if (ControllaAccettazioneGiocatore(g))
                 {
-                    g._carte.Remove(c);
+                    //azzera puntata
+                    g.Puntata = 0;
+                    //togli carte dai giocatori 
+                    foreach (Carta c in g._carte)
+                    {
+                        g._carte.Remove(c);
+                    }
+                }
+                else
+                {
+                    RimuoviGiocatore(g);
                 }
             }
             //richiama cambio mazziere 
@@ -117,7 +124,13 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public void AssegnaValoreAReDiDenara(double v, Giocatore g)
         {
-            g._reDiDenara = v;
+            foreach(Giocatore gioc in _giocatori)
+            {
+                if(g == gioc)
+                {
+                    gioc._reDiDenara = v;
+                }
+            }
         }
 
         public bool AssegnaCartaAGiocatore(Giocatore g)
@@ -142,6 +155,18 @@ namespace Sette_e_mezzo_Gruppo_1
                 }
             }
             return tot;
+        }
+
+        public bool ControllaAccettazioneGiocatore(Giocatore g)
+        {
+            if (g.Soldi < 10)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public void AssegnaVincita()
