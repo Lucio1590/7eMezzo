@@ -1,0 +1,444 @@
+﻿<Window x:Class="Sette_e_mezzo_Gruppo_1.WpfTavolo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sette_e_mezzo_Gruppo_1"
+        mc:Ignorable="d"
+        Title="Tavolo" Height="1000" Width="1900"  WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="Sfondo/background.png"/>
+    </Window.Background>
+    <Grid HorizontalAlignment="Left" Width="1900" Height="1000" VerticalAlignment="Top" x:Name="GridGenerale">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="G1" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="0" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G1_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G1_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G1_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G1_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G1_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G1_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G1_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G1_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G1_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G1_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G1_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G1_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G1_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G1_C11" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Button x:Name="btn_exit" Content="X" Grid.Column="2" HorizontalAlignment="Left" Margin="568,10,0,0" VerticalAlignment="Top" Width="55" Height="50" Background="#FFB74B3A" BorderBrush="#FFBD3939" Click="btn_exit_Click"/>
+        <Grid x:Name="G9" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="2" Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G9_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G9_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G9_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G9_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro1" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G9_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G9_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G9_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G9_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G9_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G9_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G9_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G9_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G9_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G9_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G8" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="1" Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G8_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G8_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G1_CS2" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G8_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro2" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G8_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G8_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="V3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G8_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G8_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G8_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G8_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G8_C3" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="V9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G8_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G11" HorizontalAlignment="Left" Height="240" Margin="11,122,0,0" VerticalAlignment="Top" Width="613" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G11_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G11_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G11_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G11_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro3" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G11_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G11_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G11_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G11_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G11_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G11_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G11_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G11_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G11_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G11_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G7" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G7_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G7_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G7_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G7_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro4" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G7_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G7_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G7_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G7_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G7_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G7_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G7_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G7_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G7_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G7_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G6" HorizontalAlignment="Left" Height="240" Margin="11,0,0,0" VerticalAlignment="Top" Width="613" Grid.Row="3" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G6_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G6_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G6_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G6_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro5" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G6_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G6_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G6_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G6_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G6_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G6_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G6_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="g6_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G6_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G6_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G10" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="3" Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G10_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G10_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G10_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G10_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro6" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G10_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G10_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G10_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G10_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G10_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G10_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G10_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G10_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G10_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G10_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G5" HorizontalAlignment="Left" Height="240" Margin="11,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="0" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G5_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G5_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G5_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G5_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro7" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G5_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G5_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G5_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G5_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G5_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G5_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G5_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G5_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G5_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G5_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G4" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="3" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G4_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G4_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G4_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G4_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro8" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G4_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G4_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G4_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G4_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G4_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G4_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G4_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G4_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G4_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G4_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G3" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="2" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G3_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G3_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G3_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G3_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro9" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G3_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G3_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G3_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G3_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G3_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G3_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G3_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G3_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G3_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G3_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="G2" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="1" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="G2_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Label x:Name="G2_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
+            <Image x:Name="G2_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
+            <TextBlock x:Name="G2_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2A3E1D" Offset="0.009"/>
+                        <GradientStop Color="#FF3D7219" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+            <TextBlock x:Name="G_SimboloDenaro10" HorizontalAlignment="Left" Margin="90,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="20" FontSize="36" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Grid.Row="1">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF535311"/>
+                        <GradientStop Color="#FFD3D339" Offset="0.499"/>
+                        <GradientStop Color="#FF80804E" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Image x:Name="G2_C1" Margin="125,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G2_C2" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G2_C3" Margin="200,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G2_C4" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G2_C5" Margin="275,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G2_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G2_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G2_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
+            <Image x:Name="G2_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G2_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
+        </Grid>
+    </Grid>
+</Window>
