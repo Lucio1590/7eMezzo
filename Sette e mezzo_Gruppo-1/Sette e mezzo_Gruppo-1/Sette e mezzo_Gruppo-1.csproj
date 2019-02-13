@@ -70,6 +70,9 @@
       <DependentUpon>Puntata.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tavolo.cs" />
+    <Compile Include="WpfTavolo.xaml.cs">
+      <DependentUpon>WpfTavolo.xaml</DependentUpon>
+    </Compile>
     <Page Include="AggiuntaGiocatori.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Puntata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfTavolo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,6 +180,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Giocatori\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sfondo\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Carte\null.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

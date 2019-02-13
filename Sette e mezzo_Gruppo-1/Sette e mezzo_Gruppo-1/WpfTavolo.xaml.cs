@@ -10,29 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
     /// <summary>
-    /// Logica di interazione per MainWindow.xaml
+    /// Logica di interazione per WpfTavolo.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WpfTavolo : Window
     {
-        public MainWindow()
+        public WpfTavolo()
         {
             InitializeComponent();
         }
-
-        //private void CreaInterfacciaGiocatori(int NumeroGiocatori)
-        //{
-                    
-        //}
-
-        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        public void GeneraTavolo()
         {
-            Close();
+
         }
     }
 }
