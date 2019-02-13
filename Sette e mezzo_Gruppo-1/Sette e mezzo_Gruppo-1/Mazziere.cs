@@ -8,11 +8,18 @@ namespace Sette_e_mezzo_Gruppo_1
 {
     class Mazziere : Giocatore
     {
-        public List<Carta> carte;
-        public Mazziere(string nick):base(nick)
+        private List<Carta> _carte;
+        public Mazziere(string nick) : base(nick)
         {
-
+            CostruisciListaCarte();
         }
+
+        
+        public Mazziere(string nick, int soldi) : base(nick, soldi) //costruttore secondario per il cambio mazziere
+        {
+            CostruisciListaCarte();
+        }
+        public List<Carta> Carte { get => _carte; set => _carte = value; }
 
         private void CostruisciListaCarte()
         {
@@ -34,8 +41,15 @@ namespace Sette_e_mezzo_Gruppo_1
                         break;
                 }
                 carta = new Carta(i, segno, "Carte/" + i.ToString() + segno.ToString() + ".png");
-                carte.Add(carta);
+                Carte.Add(carta);
             }
-        }        
+        }
+
+        public Carta DaiCarta()
+        {
+            Carta c = _carte[0];
+            _carte.Remove(_carte[0]);
+            return c;
+        }
     }
 }
