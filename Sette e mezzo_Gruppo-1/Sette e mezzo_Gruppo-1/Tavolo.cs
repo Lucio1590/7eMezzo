@@ -14,9 +14,9 @@ namespace Sette_e_mezzo_Gruppo_1
         public Tavolo()
         {
             _giocatori = new Giocatore[11];
-            foreach(Giocatore g in _giocatori)
+            for(int i=0; i<_giocatori.Length; i++)
             {
-                g = null;
+                _giocatori[i] = null;
             }
         }
         /// <summary>
