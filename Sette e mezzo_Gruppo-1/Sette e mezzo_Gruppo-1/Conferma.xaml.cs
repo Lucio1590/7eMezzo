@@ -15,17 +15,29 @@ using System.Windows.Shapes;
 namespace Sette_e_mezzo_Gruppo_1
 {
     /// <summary>
-    /// Logica di interazione per WpfTavolo.xaml
+    /// Logica di interazione per Conferma.xaml
     /// </summary>
-    public partial class WpfTavolo : Window
+    public partial class Conferma : Window
     {
-        public WpfTavolo()
+        Tavolo t;
+        int pos;
+        Button b;
+        TextBox textBox;
+        public Conferma(Tavolo tavolo, int posizione, Button bB, TextBox tb)
         {
             InitializeComponent();
+            t = tavolo;
+            pos = posizione;
+            b = bB;
+            textBox = tb;
         }
-       
+        private void btnYes_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Close();
+        }
 
-        private void Chiudi(object sender, RoutedEventArgs e)
+        private void btnNo_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }

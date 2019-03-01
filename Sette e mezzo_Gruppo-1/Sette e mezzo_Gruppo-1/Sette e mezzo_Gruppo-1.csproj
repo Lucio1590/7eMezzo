@@ -61,6 +61,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Carta.cs" />
+    <Compile Include="Conferma.xaml.cs">
+      <DependentUpon>Conferma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Giocatore.cs" />
     <Compile Include="Mazziere.cs" />
     <Compile Include="PartitaFinita.xaml.cs">
@@ -74,6 +77,10 @@
       <DependentUpon>WpfTavolo.xaml</DependentUpon>
     </Compile>
     <Page Include="AggiuntaGiocatori.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Conferma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -92,10 +99,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NuovoGioco.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="PartitaFinita.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,9 +113,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NuovoGioco.xaml.cs">
-      <DependentUpon>NuovoGioco.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -186,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Carte\null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sfondo\sfondoMain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

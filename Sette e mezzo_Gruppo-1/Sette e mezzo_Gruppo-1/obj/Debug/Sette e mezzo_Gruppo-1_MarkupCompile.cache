@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\enrico.benedettini\Desktop\Progetto7EMezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\App.xaml
-51900568298
+675970152
 
-17415917554
+14-23274714
 1544384529
-AggiuntaGiocatori.xaml;MainWindow.xaml;NuovoGioco.xaml;PartitaFinita.xaml;Puntata.xaml;
+AggiuntaGiocatori.xaml;Conferma.xaml;MainWindow.xaml;PartitaFinita.xaml;Puntata.xaml;WpfTavolo.xaml;
 
-True
+False
 

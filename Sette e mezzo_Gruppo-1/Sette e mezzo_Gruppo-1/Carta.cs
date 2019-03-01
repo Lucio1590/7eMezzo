@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
-    class Carta
+    public class Carta
     {
         private int _valore;
         private Segno _segno;

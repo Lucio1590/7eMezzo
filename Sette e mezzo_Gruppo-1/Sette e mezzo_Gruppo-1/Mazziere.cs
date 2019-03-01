@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
-    class Mazziere : Giocatore
+    public class Mazziere : Giocatore
     {
         private List<Carta> _carte;
         public Mazziere(string nick) : base(nick)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
-    class Giocatore : IComparable<Giocatore>
+    public class Giocatore : IComparable<Giocatore>
     {
         private string _nick;
         private int _soldi;

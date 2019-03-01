@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
-    class Tavolo
+    public class Tavolo
     {
         Giocatore [] _giocatori;
         Mazziere _mazziere;
 
         public Tavolo()
         {
-            _giocatori = new Giocatore[11];
-            for(int i=0; i<_giocatori.Length; i++)
+            Giocatori1 = new Giocatore[11];
+            for(int i=0; i<Giocatori1.Length; i++)
             {
-                _giocatori[i] = null;
+                Giocatori1[i] = null;
             }
         }
+        public Giocatore[] Giocatori1 { get => _giocatori; set => _giocatori = value; }
+
         /// <summary>
         /// Metodo che viene richiamato con l'avvio di una nuova partita,
         /// si occupa di azzerare la puntata di ogni giocatore , 
@@ -28,7 +30,7 @@ namespace Sette_e_mezzo_Gruppo_1
         /// </summary>
         public void NuovaPartita()
         {
-            foreach (Giocatore g in _giocatori)
+            foreach (Giocatore g in Giocatori1)
             {
                 if (ControllaAccettazioneGiocatore(g))
                 {
@@ -48,17 +50,18 @@ namespace Sette_e_mezzo_Gruppo_1
             //richiama cambio mazziere 
             CambiaMazziere();
         }
+        
         /// <summary>
         /// Metodo di rimozione di un giocatore
         /// </summary>
         /// <returns></returns>
-        public void RimuoviGiocatore(Giocatore g)
+        private void RimuoviGiocatore(Giocatore g)
         {
-            for(int i=0; i<_giocatori.Length; i++)
+            for(int i=0; i<Giocatori1.Length; i++)
             {
-                if (_giocatori[i] == g)
+                if (Giocatori1[i] == g)
                 {
-                    _giocatori[i] = null;
+                    Giocatori1[i] = null;
                 }
             }
         }
@@ -68,7 +71,7 @@ namespace Sette_e_mezzo_Gruppo_1
         /// <param name="g"></param>
         public void AggiungiGiocatore(Giocatore g, int pos)
         {
-            _giocatori[pos] = g;
+            Giocatori1[pos] = g;
         }
         /// <summary>
         /// Metodo di cambio del mazziere e di slittamento di tutti i giocatori all'interno dell'array
@@ -76,45 +79,45 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public void CambiaMazziere()
         {
-            for(int i=0; i<_giocatori.Length; i++)
+            for(int i=0; i<Giocatori1.Length; i++)
             {
-                if(_giocatori[i] is Mazziere)
+                if(Giocatori1[i] is Mazziere)
                 {
                     Giocatore aus=null;
                     for(int j=0; j<i; j++)
                     {
                         if (j == 0)
                         {
-                            aus = _giocatori[_giocatori.Length - 1];
-                            _giocatori[_giocatori.Length - 1] = _giocatori[j];
+                            aus = Giocatori1[Giocatori1.Length - 1];
+                            Giocatori1[Giocatori1.Length - 1] = Giocatori1[j];
                         }
                         else
                         {
-                            _giocatori[j - 1] = _giocatori[j];
-                            _giocatori[j] = null;
+                            Giocatori1[j - 1] = Giocatori1[j];
+                            Giocatori1[j] = null;
                         }
                     }
-                    if (i != _giocatori.Length - 1)
+                    if (i != Giocatori1.Length - 1)
                     {
-                        Mazziere m = new Mazziere(_giocatori[i+1].Nick, _giocatori[i+1].Soldi);
-                        Giocatore g = new Giocatore(_giocatori[i].Nick, _giocatori[i].Soldi);
-                        _giocatori[i] = m;
+                        Mazziere m = new Mazziere(Giocatori1[i+1].Nick, Giocatori1[i+1].Soldi);
+                        Giocatore g = new Giocatore(Giocatori1[i].Nick, Giocatori1[i].Soldi);
+                        Giocatori1[i] = m;
                         _mazziere = m;
-                        _giocatori[i - 1] = g;
+                        Giocatori1[i - 1] = g;
                     }
                     else
                     {
-                        Mazziere m = new Mazziere(_giocatori[0].Nick, _giocatori[0].Soldi);
-                        Giocatore g = new Giocatore(_giocatori[i].Nick, _giocatori[i].Soldi);
-                        _giocatori[_giocatori.Length] = m;
+                        Mazziere m = new Mazziere(Giocatori1[0].Nick, Giocatori1[0].Soldi);
+                        Giocatore g = new Giocatore(Giocatori1[i].Nick, Giocatori1[i].Soldi);
+                        Giocatori1[Giocatori1.Length] = m;
                         _mazziere = m;
-                        _giocatori[i - 1] = g;
+                        Giocatori1[i - 1] = g;
                     }
-                    for(int j=i+1; j<_giocatori.Length; j++)
+                    for(int j=i+1; j<Giocatori1.Length; j++)
                     {
-                        if (j == _giocatori.Length - 1 && aus!=null)
+                        if (j == Giocatori1.Length - 1 && aus!=null)
                         {
-                            _giocatori[j] = aus;
+                            Giocatori1[j] = aus;
                         }
                     }
                     break;
@@ -124,7 +127,7 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public void AssegnaValoreAReDiDenara(double v, Giocatore g)
         {
-            foreach(Giocatore gioc in _giocatori)
+            foreach(Giocatore gioc in Giocatori1)
             {
                 if(g == gioc)
                 {
@@ -147,7 +150,7 @@ namespace Sette_e_mezzo_Gruppo_1
         public int GetSommaPuntate()
         {
             int tot = 0;
-            foreach(Giocatore g in _giocatori)
+            foreach(Giocatore g in Giocatori1)
             {
                 if (g != null)
                 {
@@ -159,13 +162,20 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public bool ControllaAccettazioneGiocatore(Giocatore g)
         {
-            if (g.Soldi < 10)
+            if (g != null)
             {
-                return false;
+                if (g.Soldi < 10)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
             else
             {
-                return true;
+                return false;
             }
         }
 
@@ -174,32 +184,32 @@ namespace Sette_e_mezzo_Gruppo_1
             List<Giocatore> _vincitori=new List<Giocatore>();
             double max = 0;
             int indexMax = 0;
-            for(int i=0; i<_giocatori.Length; i++)
+            for(int i=0; i<Giocatori1.Length; i++)
             {
-                if (_giocatori[i] != null)
+                if (Giocatori1[i] != null)
                 {
-                    if (_giocatori[i].GetPunteggioTotale() > max && !_giocatori[i].SforaLimite())
+                    if (Giocatori1[i].GetPunteggioTotale() > max && !Giocatori1[i].SforaLimite())
                     {
-                        max = _giocatori[i].GetPunteggioTotale();
+                        max = Giocatori1[i].GetPunteggioTotale();
                         indexMax = i;
-                    }else if(_giocatori[i].GetPunteggioTotale() == max && !_giocatori[i].SforaLimite())
+                    }else if(Giocatori1[i].GetPunteggioTotale() == max && !Giocatori1[i].SforaLimite())
                     {
-                        if(_giocatori[i]._carte.Count < _giocatori[indexMax]._carte.Count)
+                        if(Giocatori1[i]._carte.Count < Giocatori1[indexMax]._carte.Count)
                         {
                             indexMax = i;
                         }
-                        else if(_giocatori[i]._carte.Count == _giocatori[indexMax]._carte.Count && _giocatori[i]._reDiDenara!=0)
+                        else if(Giocatori1[i]._carte.Count == Giocatori1[indexMax]._carte.Count && Giocatori1[i]._reDiDenara!=0)
                         {
                             indexMax = i;
                         }
-                        else if(_giocatori[i]._carte.Count == _giocatori[indexMax]._carte.Count && _giocatori[indexMax]._reDiDenara == 0)
+                        else if(Giocatori1[i]._carte.Count == Giocatori1[indexMax]._carte.Count && Giocatori1[indexMax]._reDiDenara == 0)
                         {
-                            _vincitori.Add(_giocatori[i]);
+                            _vincitori.Add(Giocatori1[i]);
                         }
                     }
                 }
             }
-            _vincitori.Add(_giocatori[indexMax]);
+            _vincitori.Add(Giocatori1[indexMax]);
             int tot = 0;
             tot = GetSommaPuntate();
             for(int i = 0; i < _vincitori.Count; i++)
@@ -210,12 +220,12 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public void ModificaPuntata(Giocatore g, int puntata)
         {
-            for(int i=0; i<_giocatori.Length; i++)
+            for(int i=0; i<Giocatori1.Length; i++)
             {
-                if (_giocatori[i].Nick.Equals(g.Nick))
+                if (Giocatori1[i].Nick.Equals(g.Nick))
                 {
-                    _giocatori[i] = g;
-                    _giocatori[i].Puntata = puntata;
+                    Giocatori1[i] = g;
+                    Giocatori1[i].Puntata = puntata;
                 }
             }
         }
@@ -223,7 +233,7 @@ namespace Sette_e_mezzo_Gruppo_1
         public List<Giocatore> GetClassifica()
         {
             List<Giocatore> _classifica = new List<Giocatore>();
-            foreach(Giocatore g in _giocatori)
+            foreach(Giocatore g in Giocatori1)
             {
                 _classifica.Add(g);
             }

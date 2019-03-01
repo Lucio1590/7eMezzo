@@ -43,7 +43,7 @@ namespace Sette_e_mezzo_Gruppo_1
             else
             {
                 n++;
-                lblNumeroGiocatori.DataContext = Convert.ToString(n);
+                tbxNumeroGiocatori.Text = Convert.ToString(n);
             }
         }
 
@@ -56,13 +56,19 @@ namespace Sette_e_mezzo_Gruppo_1
             else
             {
                 n--;
-                lblNumeroGiocatori.DataContext = Convert.ToString(n);
+                tbxNumeroGiocatori.Text = Convert.ToString(n);
             }
         }
 
         private void btnNuovoGioco_Click(object sender, RoutedEventArgs e)
         {
             tavolo.NuovaPartita();
+            for(int i=0; i<n; i++)
+            {
+                
+            }
+            AggiuntaGiocatori nuova = new AggiuntaGiocatori(n, tavolo);
+            nuova.ShowDialog();
         }
 
         private void btnEsci_Click(object sender, RoutedEventArgs e)
