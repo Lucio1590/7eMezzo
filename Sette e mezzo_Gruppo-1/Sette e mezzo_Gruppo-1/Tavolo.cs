@@ -71,7 +71,7 @@ namespace Sette_e_mezzo_Gruppo_1
         /// <param name="g"></param>
         public void AggiungiGiocatore(Giocatore g, int pos)
         {
-            Giocatori1[pos] = g;
+            Giocatori1[pos-1] = g;
         }
         /// <summary>
         /// Metodo di cambio del mazziere e di slittamento di tutti i giocatori all'interno dell'array

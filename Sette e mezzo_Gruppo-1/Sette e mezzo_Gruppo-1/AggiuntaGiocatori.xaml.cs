@@ -22,14 +22,37 @@ namespace Sette_e_mezzo_Gruppo_1
         Tavolo t;
         int n;
         List<TextBox> testboxes;
+        List<Button> buttons;
         public AggiuntaGiocatori(int nP, Tavolo tavolo)
         {
+            InitializeComponent();
+            n = nP;
             testboxes = new List<TextBox>();
+            buttons = new List<Button>();
             /*foreach(UIElement u in this.)
             for(int i=0; i<11; i++)
             {
                 testboxes.Add()
             }*/
+            for(int i=1; i<n; i++)
+            {
+                Button b = (Button)this.FindName("btn_" + i);
+                b.Content = "X";
+                b.Background = Brushes.Red;
+                b.Foreground = Brushes.White;
+                ((TextBox)FindName("tbx_" + i)).Text = "";
+            }
+
+            buttons.Add(btn_1);
+            buttons.Add(btn_2);
+            buttons.Add(btn_3);
+            buttons.Add(btn_4);
+            buttons.Add(btn_5);
+            buttons.Add(btn_6);
+            buttons.Add(btn_7);
+            buttons.Add(btn_8);
+            buttons.Add(btn_9);
+            buttons.Add(btn_10);
             testboxes.Add(tbx_1);
             testboxes.Add(tbx_2);
             testboxes.Add(tbx_3);
@@ -41,9 +64,7 @@ namespace Sette_e_mezzo_Gruppo_1
             testboxes.Add(tbx_9);
             testboxes.Add(tbx_10);
             testboxes.Add(tbx_11);
-            n = nP;
             t = tavolo;
-            InitializeComponent();
         }
         
 
@@ -59,13 +80,35 @@ namespace Sette_e_mezzo_Gruppo_1
                 {
                     t.Giocatori1[pos] = null;
                     b.Background = Brushes.Yellow;
+                    b.Foreground = Brushes.Black;
+                    b.Content = "✚";
+                    ((TextBox)this.FindName("tbx_" + pos)).Foreground = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF858585"));
+                    ((TextBox)this.FindName("tbx_" + pos)).Text = "Nick...";
+                    buttons[pos - 1] = b;
                 }
             }
             else
             {
-                Giocatore g = new Giocatore(testboxes[pos-1].Text);
-                t.AggiungiGiocatore(g, pos);
-                b.Background = Brushes.Red;
+                try
+                {
+                    if (((TextBox)this.FindName("tbx_" + pos)).Text=="")
+                    {
+                        throw new Exception("Errore nell'inserimento del nickname");
+                    }
+                    else
+                    {
+                        Giocatore g = new Giocatore(testboxes[pos - 1].Text);
+                        t.AggiungiGiocatore(g, pos);
+                        MessageBox.Show("Giocatore inserito con successo");
+                        b.Background = Brushes.Red;
+                        b.Content = "X";
+                        b.Foreground = Brushes.White;
+                        buttons[pos - 1] = b;
+                    }
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -76,14 +119,32 @@ namespace Sette_e_mezzo_Gruppo_1
 
         private void btnNuova_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                for (int i = 1; i < testboxes.Count+1; i++)
+                {
+                    if ((testboxes[i].Text == null || testboxes[i].Text == "") && buttons[i].Background == Brushes.Red)
+                    {
+                        throw new Exception("Errore nell'inserimento dei nomi dei giocatori");
+                    }
+                }
+                WpfTavolo nuova = new WpfTavolo();
+                nuova.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void AggiornaLista(object sender, TextChangedEventArgs e)
         {
             TextBox text = sender as TextBox;
             string[] el = text.Name.Split('_');
-            MessageBox.Show(el[1]);
+            if (text.Text == "")
+            {
+                text.Foreground = Brushes.Black;
+            }
         }
     }
 }

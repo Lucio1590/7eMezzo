@@ -61,9 +61,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Carta.cs" />
-    <Compile Include="Conferma.xaml.cs">
-      <DependentUpon>Conferma.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Giocatore.cs" />
     <Compile Include="Mazziere.cs" />
     <Compile Include="PartitaFinita.xaml.cs">
@@ -77,10 +74,6 @@
       <DependentUpon>WpfTavolo.xaml</DependentUpon>
     </Compile>
     <Page Include="AggiuntaGiocatori.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Conferma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

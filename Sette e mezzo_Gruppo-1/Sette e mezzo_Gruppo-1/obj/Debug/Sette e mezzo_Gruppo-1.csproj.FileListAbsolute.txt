@@ -115,5 +115,3 @@ C:\Users\enrico.benedettini\Desktop\Progetto7EMezzo\Sette e mezzo_Gruppo-1\Sette
 C:\Users\enrico.benedettini\Desktop\Progetto7EMezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\obj\Debug\Sette e mezzo_Gruppo-1.csproj.GenerateResource.cache
 C:\Users\enrico.benedettini\Desktop\Progetto7EMezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\obj\Debug\Sette e mezzo_Gruppo-1.csproj.CoreCompileInputs.cache
 C:\Users\enrico.benedettini\Desktop\Progetto7EMezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\obj\Debug\Sette e mezzo_Gruppo-1.csproj.CopyComplete
-C:\Users\enrico.benedettini\Desktop\Progetto7EMezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\obj\Debug\Conferma.g.cs
-C:\Users\enrico.benedettini\Desktop\Progetto7EMezzo\Sette e mezzo_Gruppo-1\Sette e mezzo_Gruppo-1\obj\Debug\Conferma.baml
