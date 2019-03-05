@@ -19,9 +19,17 @@ namespace Sette_e_mezzo_Gruppo_1
     /// </summary>
     public partial class WpfTavolo : Window
     {
-        public WpfTavolo()
+        Tavolo tavolo;
+        int n;
+        public WpfTavolo(int nP, Tavolo t)
         {
             InitializeComponent();
+            tavolo = t;
+            n = nP;
+            for (int i=0; i<n; i++)
+            {
+                
+            }
         }
        
 

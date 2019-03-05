@@ -23,10 +23,10 @@ namespace Sette_e_mezzo_Gruppo_1
         int n;
         List<TextBox> testboxes;
         List<Button> buttons;
-        public AggiuntaGiocatori(int nP, Tavolo tavolo)
+        public AggiuntaGiocatori(Tavolo tavolo)
         {
             InitializeComponent();
-            n = nP;
+            n = 1;
             testboxes = new List<TextBox>();
             buttons = new List<Button>();
             /*foreach(UIElement u in this.)
@@ -34,14 +34,6 @@ namespace Sette_e_mezzo_Gruppo_1
             {
                 testboxes.Add()
             }*/
-            for(int i=1; i<n; i++)
-            {
-                Button b = (Button)this.FindName("btn_" + i);
-                b.Content = "X";
-                b.Background = Brushes.Red;
-                b.Foreground = Brushes.White;
-                ((TextBox)FindName("tbx_" + i)).Text = "";
-            }
 
             buttons.Add(btn_1);
             buttons.Add(btn_2);
@@ -85,13 +77,14 @@ namespace Sette_e_mezzo_Gruppo_1
                     ((TextBox)this.FindName("tbx_" + pos)).Foreground = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF858585"));
                     ((TextBox)this.FindName("tbx_" + pos)).Text = "Nick...";
                     buttons[pos - 1] = b;
+                    n--;
                 }
             }
             else
             {
                 try
                 {
-                    if (((TextBox)this.FindName("tbx_" + pos)).Text=="")
+                    if (((TextBox)this.FindName("tbx_" + pos)).Text == "" || ((TextBox)this.FindName("tbx_" + pos)).Text == "Nick...")
                     {
                         throw new Exception("Errore nell'inserimento del nickname");
                     }
@@ -104,6 +97,7 @@ namespace Sette_e_mezzo_Gruppo_1
                         b.Content = "X";
                         b.Foreground = Brushes.White;
                         buttons[pos - 1] = b;
+                        n++;
                     }
                 }catch(Exception ex)
                 {
@@ -121,14 +115,14 @@ namespace Sette_e_mezzo_Gruppo_1
         {
             try
             {
-                for (int i = 1; i < testboxes.Count+1; i++)
+                if (n < 2)
                 {
-                    if ((testboxes[i].Text == null || testboxes[i].Text == "") && buttons[i].Background == Brushes.Red)
-                    {
-                        throw new Exception("Errore nell'inserimento dei nomi dei giocatori");
-                    }
+                    throw new Exception("Non è possibile giocare con meno di due giocatori");
+                }else if(tbx_11.Text == "")
+                {
+                    throw new Exception("Errore nell'inserimento del nome del mazziere");
                 }
-                WpfTavolo nuova = new WpfTavolo();
+                WpfTavolo nuova = new WpfTavolo(t);
                 nuova.Show();
             }
             catch(Exception ex)

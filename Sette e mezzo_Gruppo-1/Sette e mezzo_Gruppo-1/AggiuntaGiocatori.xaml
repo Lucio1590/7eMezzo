@@ -18,8 +18,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btn_1" Content="X" HorizontalAlignment="Left" Margin="338,48,0,0" VerticalAlignment="Top" Width="52" Background="Red" Click="AggiungiOrRimuovi"/>
-        <TextBox x:Name="tbx_1" HorizontalAlignment="Left" Height="30" Margin="56,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" TextChanged="AggiornaLista"/>
+        <Button x:Name="btn_1" Content="✚" HorizontalAlignment="Left" Margin="338,48,0,0" VerticalAlignment="Top" Width="52" Background="Yellow" Click="AggiungiOrRimuovi" Foreground="#DD000000"/>
+        <TextBox x:Name="tbx_1" HorizontalAlignment="Left" Height="30" Margin="56,47,0,0" TextWrapping="Wrap" Text="Nick..." VerticalAlignment="Top" Width="207" Foreground="#FF858585" TextChanged="AggiornaLista"/>
         <Button x:Name="btn_2" Content="✚" HorizontalAlignment="Left" Margin="338,48,0,0" VerticalAlignment="Top" Width="52" Background="Yellow" Grid.Row="1" Click="AggiungiOrRimuovi" Foreground="#DD000000"/>
         <TextBox x:Name="tbx_2" HorizontalAlignment="Left" Height="30" Margin="56,47,0,0" TextWrapping="Wrap" Text="Nick..." VerticalAlignment="Top" Width="207" Grid.Row="1" Foreground="#FF858585" TextChanged="AggiornaLista"/>
         <Button x:Name="btn_3" Content="✚" HorizontalAlignment="Left" Margin="338,48,0,0" VerticalAlignment="Top" Width="52" Background="Yellow" Grid.Row="2" Click="AggiungiOrRimuovi" Foreground="#DD000000"/>
