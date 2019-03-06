@@ -172,9 +172,6 @@
     <Resource Include="Carte\9s.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Giocatori\user.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Sfondo\background.png" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +179,32 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sfondo\sfondoMain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Giocatori\user1.png" />
+    <Resource Include="Giocatori\user10.png" />
+    <Resource Include="Giocatori\user11.png" />
+    <Resource Include="Giocatori\user12.png" />
+    <Resource Include="Giocatori\user13.png" />
+    <Resource Include="Giocatori\user14.png" />
+    <Resource Include="Giocatori\user15.png" />
+    <Resource Include="Giocatori\user16.png" />
+    <Resource Include="Giocatori\user17.png" />
+    <Resource Include="Giocatori\user18.png" />
+    <Resource Include="Giocatori\user19.png" />
+    <Resource Include="Giocatori\user2.png" />
+    <Resource Include="Giocatori\user20.png" />
+    <Resource Include="Giocatori\user21.png" />
+    <Resource Include="Giocatori\user3.png" />
+    <Resource Include="Giocatori\user4.png" />
+    <Resource Include="Giocatori\user5.png" />
+    <Resource Include="Giocatori\user6.png" />
+    <Resource Include="Giocatori\user7.png" />
+    <Resource Include="Giocatori\user8.png" />
+    <Resource Include="Giocatori\user9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Giocatori\user0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

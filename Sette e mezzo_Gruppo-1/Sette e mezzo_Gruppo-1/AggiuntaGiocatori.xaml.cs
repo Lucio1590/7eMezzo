@@ -29,6 +29,10 @@ namespace Sette_e_mezzo_Gruppo_1
             n = 1;
             testboxes = new List<TextBox>();
             buttons = new List<Button>();
+            for(int i=0; i<11; i++)
+            {
+                ((ListBox)FindName("lblAvatars_" + i + 1)).Items.Add(t.PathImages);
+            }
             /*foreach(UIElement u in this.)
             for(int i=0; i<11; i++)
             {
@@ -92,6 +96,7 @@ namespace Sette_e_mezzo_Gruppo_1
                     {
                         Giocatore g = new Giocatore(testboxes[pos - 1].Text);
                         t.AggiungiGiocatore(g, pos);
+                        ((ListBox)FindName("lblAvatars_" + pos)).Visibility = Visibility.Hidden;
                         MessageBox.Show("Giocatore inserito con successo");
                         b.Background = Brushes.Red;
                         b.Content = "X";
@@ -122,7 +127,7 @@ namespace Sette_e_mezzo_Gruppo_1
                 {
                     throw new Exception("Errore nell'inserimento del nome del mazziere");
                 }
-                WpfTavolo nuova = new WpfTavolo(t);
+                WpfTavolo nuova = new WpfTavolo(n,t);
                 nuova.Show();
             }
             catch(Exception ex)
@@ -140,5 +145,6 @@ namespace Sette_e_mezzo_Gruppo_1
                 text.Foreground = Brushes.Black;
             }
         }
+        
     }
 }

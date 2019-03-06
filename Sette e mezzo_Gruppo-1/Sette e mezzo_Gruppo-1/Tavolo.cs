@@ -3,16 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Windows;
+/*using System.ComponentModel.TypeConverter(typeof(System.Drawing.ImageConverter));
+using System.Runtime.InteropServices.ComVisible(true);
+using System.Serializable;
+using System.ComponentModel.TypeConverter("System.Drawing.ImageConverter, System.Windows.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
+*/
 namespace Sette_e_mezzo_Gruppo_1
 {
     public class Tavolo
     {
         Giocatore [] _giocatori;
         Mazziere _mazziere;
-
+        List<BitmapImage> _pathImages;
         public Tavolo()
         {
+            PathImages= new List<BitmapImage>();
+            for(int i=0; i<22; i++)
+            {
+                Uri u = new Uri("Giocatori/user" + i + ".png");
+                BitmapImage im = new BitmapImage(u);       
+                PathImages.Add(im);
+            }
             Giocatori1 = new Giocatore[11];
             for(int i=0; i<Giocatori1.Length; i++)
             {
@@ -20,6 +39,7 @@ namespace Sette_e_mezzo_Gruppo_1
             }
         }
         public Giocatore[] Giocatori1 { get => _giocatori; set => _giocatori = value; }
+        public List<BitmapImage> PathImages { get => _pathImages; set => _pathImages = value; }
 
         /// <summary>
         /// Metodo che viene richiamato con l'avvio di una nuova partita,

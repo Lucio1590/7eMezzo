@@ -28,7 +28,10 @@ namespace Sette_e_mezzo_Gruppo_1
             n = nP;
             for (int i=0; i<n; i++)
             {
-                
+                if (t.Giocatori1[i] != null)
+                {
+
+                }
             }
         }
        

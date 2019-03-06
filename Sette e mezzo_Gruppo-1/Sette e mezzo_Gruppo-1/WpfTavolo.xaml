@@ -29,7 +29,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G1_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G1_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G1_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G1_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G1_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -68,7 +68,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G9_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G9_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G9_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G9_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G9_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -106,7 +106,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G8_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G8_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G8_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G1_CS2" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G8_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -144,7 +144,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G11_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G11_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G11_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G11_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G11_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -182,7 +182,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G7_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G7_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G7_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G7_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G7_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -220,7 +220,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G6_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G6_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G6_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G6_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G6_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -258,7 +258,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G10_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G10_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G10_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G10_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G10_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -296,7 +296,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G5_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G5_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G5_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G5_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G5_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -334,7 +334,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G4_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G4_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G4_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G4_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G4_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -372,7 +372,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G3_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G3_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G3_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G3_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G3_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">
@@ -410,7 +410,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="G2_Avatar" Margin="20,28,0,0" Source="Giocatori/user.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
+            <Image x:Name="G2_Avatar" Margin="20,28,0,0" Source="Giocatori/user0.png" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" OpacityMask="Black"/>
             <Label x:Name="G2_Nick" Content="Nickname" Margin="10,0,0,0" HorizontalContentAlignment="Center" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold" Foreground="#DDA29B9B" Background="{x:Null}" Grid.Row="1"/>
             <Image x:Name="G2_CS" Margin="125,5,0,0" Source="Carte/Retro.jpg" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top"/>
             <TextBlock x:Name="G2_Denaro" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Height="30" Width="70" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Black" FontWeight="Bold" VerticalAlignment="Top" Grid.Row="1">

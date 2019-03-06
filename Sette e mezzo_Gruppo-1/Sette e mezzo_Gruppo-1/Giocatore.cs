@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Windows;
 
 namespace Sette_e_mezzo_Gruppo_1
 {
@@ -12,6 +20,7 @@ namespace Sette_e_mezzo_Gruppo_1
         private int _soldi;
         private int _puntata;
         public double _reDiDenara;
+        public BitmapImage _avatar;
         public List<Carta> _carte;
         //proprietà utili nel cambio mazziere e nell'azzeramento della puntata
         public string Nick { get => _nick; set => _nick= value; }
