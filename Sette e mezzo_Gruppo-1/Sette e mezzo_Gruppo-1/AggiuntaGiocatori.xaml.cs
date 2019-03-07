@@ -26,41 +26,27 @@ namespace Sette_e_mezzo_Gruppo_1
         public AggiuntaGiocatori(Tavolo tavolo)
         {
             InitializeComponent();
+            t = tavolo;
             n = 1;
             testboxes = new List<TextBox>();
             buttons = new List<Button>();
             for(int i=0; i<11; i++)
             {
-                ((ListBox)FindName("lblAvatars_" + i + 1)).Items.Add(t.PathImages);
+                foreach(BitmapImage bim in t.PathImages)
+                {
+                    ((ListBox)FindName("lbxAvatars_" + Convert.ToString(i + 1))).Items.Add(bim);
+                }
             }
-            /*foreach(UIElement u in this.)
-            for(int i=0; i<11; i++)
-            {
-                testboxes.Add()
-            }*/
 
-            buttons.Add(btn_1);
-            buttons.Add(btn_2);
-            buttons.Add(btn_3);
-            buttons.Add(btn_4);
-            buttons.Add(btn_5);
-            buttons.Add(btn_6);
-            buttons.Add(btn_7);
-            buttons.Add(btn_8);
-            buttons.Add(btn_9);
-            buttons.Add(btn_10);
-            testboxes.Add(tbx_1);
-            testboxes.Add(tbx_2);
-            testboxes.Add(tbx_3);
-            testboxes.Add(tbx_4);
-            testboxes.Add(tbx_5);
-            testboxes.Add(tbx_6);
-            testboxes.Add(tbx_7);
-            testboxes.Add(tbx_8);
-            testboxes.Add(tbx_9);
-            testboxes.Add(tbx_10);
-            testboxes.Add(tbx_11);
-            t = tavolo;
+            for(int i=1; i < n+1; i++)
+            {
+                testboxes.Add((TextBox)this.FindName("tbx_" + i));
+            }
+
+            for (int i = 1; i < n; i++)
+            {
+                buttons.Add((Button)this.FindName("btn_" + i));
+            }
         }
         
 
@@ -74,7 +60,7 @@ namespace Sette_e_mezzo_Gruppo_1
                 MessageBoxResult result = MessageBox.Show("Sicuro di voler rimuovere il giocatore?", "Conferma", MessageBoxButton.YesNo);
                 if (result.Equals(MessageBoxResult.Yes))
                 {
-                    t.Giocatori1[pos] = null;
+                    t.Giocatori1[pos-1] = null;
                     b.Background = Brushes.Yellow;
                     b.Foreground = Brushes.Black;
                     b.Content = "✚";
@@ -96,12 +82,12 @@ namespace Sette_e_mezzo_Gruppo_1
                     {
                         Giocatore g = new Giocatore(testboxes[pos - 1].Text);
                         t.AggiungiGiocatore(g, pos);
-                        ((ListBox)FindName("lblAvatars_" + pos)).Visibility = Visibility.Hidden;
+                        ((ListBox)FindName("lbxAvatars_" + pos)).Visibility = Visibility.Hidden;
                         MessageBox.Show("Giocatore inserito con successo");
                         b.Background = Brushes.Red;
                         b.Content = "X";
                         b.Foreground = Brushes.White;
-                        buttons[pos - 1] = b;
+                        //buttons[pos - 1] = b;
                         n++;
                     }
                 }catch(Exception ex)

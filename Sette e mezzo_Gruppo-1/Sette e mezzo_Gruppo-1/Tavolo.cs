@@ -28,8 +28,8 @@ namespace Sette_e_mezzo_Gruppo_1
             PathImages= new List<BitmapImage>();
             for(int i=0; i<22; i++)
             {
-                Uri u = new Uri("Giocatori/user" + i + ".png");
-                BitmapImage im = new BitmapImage(u);       
+                Uri u = new Uri("Giocatori/user" + i + ".png", UriKind.Relative);
+                BitmapImage im = new BitmapImage(u);
                 PathImages.Add(im);
             }
             Giocatori1 = new Giocatore[11];
