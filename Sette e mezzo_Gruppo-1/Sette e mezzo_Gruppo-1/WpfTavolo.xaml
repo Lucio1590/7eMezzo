@@ -361,7 +361,7 @@
             <Image x:Name="G4_C6" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
             <Image x:Name="G4_C7" Margin="350,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
             <Image x:Name="G4_C8" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True"/>
-            <Image x:Name="G4_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
+            <Image x:Name="G4_C9" Margin="425,5,118,0" Source="Carte/null.png" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
             <Image x:Name="G4_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
         </Grid>
         <Grid x:Name="G3" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="2" Grid.Column="0" >

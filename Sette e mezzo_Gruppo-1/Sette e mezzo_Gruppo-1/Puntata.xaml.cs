@@ -19,9 +19,24 @@ namespace Sette_e_mezzo_Gruppo_1
     /// </summary>
     public partial class Puntata : Window
     {
-        public Puntata()
+        Tavolo tavolo;
+        int indicePlayer;
+        int attuale;
+        public Puntata(Tavolo t, int i)
         {
             InitializeComponent();
+            tavolo = t;
+            indicePlayer = i;
+            attuale = 10;
+            lblGiocatore.Content = tavolo.Giocatori1[i].Soldi;
+        }
+
+        private void btnSu_Click(object sender, RoutedEventArgs e)
+        {
+            if (attuale <= 10)
+            {
+                throw new Exception("Impossibile puntare meno della puntata minima");
+            }
         }
     }
 }

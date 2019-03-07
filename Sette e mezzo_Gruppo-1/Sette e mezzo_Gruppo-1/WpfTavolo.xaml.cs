@@ -30,7 +30,8 @@ namespace Sette_e_mezzo_Gruppo_1
             {
                 if (t.Giocatori1[i] != null)
                 {
-
+                    Puntata nuova = new Puntata(tavolo, i);
+                    nuova.ShowDialog();
                 }
             }
         }

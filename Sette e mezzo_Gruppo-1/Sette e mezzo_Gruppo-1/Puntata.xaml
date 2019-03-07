@@ -15,17 +15,17 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="🡅" HorizontalAlignment="Left" Margin="351,120,0,0" VerticalAlignment="Top" Width="98" Height="71" FontSize="36" Grid.ColumnSpan="2"/>
-        <Button Content="🡇" HorizontalAlignment="Left" Margin="351,38,0,0" VerticalAlignment="Top" Width="98" Height="70" FontSize="36" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <TextBlock HorizontalAlignment="Left" Margin="351,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="98" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Grid.ColumnSpan="2" Grid.RowSpan="2"><Run Text="5"/><Run Text="5"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="45,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="98" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold"><Run Text="2"/><Run Text="5"/><Run Text="5"/></TextBlock>
+        <Button x:Name="btnSu" Content="🡅" HorizontalAlignment="Left" Margin="351,120,0,0" VerticalAlignment="Top" Width="98" Height="71" FontSize="36" Grid.ColumnSpan="2" Click="btnSu_Click"/>
+        <Button x:Name="btnGiu" Content="🡇" HorizontalAlignment="Left" Margin="351,38,0,0" VerticalAlignment="Top" Width="98" Height="70" FontSize="36" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <TextBlock x:Name="lblPuntata" HorizontalAlignment="Left" Margin="351,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="98" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Grid.ColumnSpan="2" Grid.RowSpan="2"><Run Text="5"/><Run Text="5"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="148,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="35" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Foreground="#FFCADC12"/>
         <TextBlock HorizontalAlignment="Left" Margin="49,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="35" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Foreground="#FFCADC12" Grid.Column="1" Grid.RowSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="45,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="98" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold"><Run FontSize="20" Text="Credito"/><Run FontSize="20" Text=":"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="249,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="98" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Grid.RowSpan="2"><Run FontSize="20" Text="Puntata:"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="257,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="78" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Grid.Column="1" Text="60"/>
-        <TextBlock HorizontalAlignment="Left" Margin="340,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="35" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Foreground="#FFCADC12" Grid.Column="1"/>
-        <TextBlock HorizontalAlignment="Left" Margin="176,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="199" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Grid.Column="1"><Run FontSize="20" Text="Puntata del Tavolo"/><Run FontSize="20" Text=":"/></TextBlock>
-
+        <TextBlock HorizontalAlignment="Left" Margin="271,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="35" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Text="€" Foreground="#FFCADC12" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="107,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="199" FontSize="48" TextAlignment="Center" FontFamily="Segoe UI Black" FontWeight="Bold" Grid.Column="1"><Run FontSize="20" Text="Puntata del Tavolo"/><Run FontSize="20" Text=":"/></TextBlock>
+        <Label x:Name="lblGiocatore" Content="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,63,0,0" Height="77" Width="98" FontSize="48" Foreground="Black" FontFamily="Segoe UI Black"/>
+        <Label x:Name="lblTavolo" Content="10" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="168,58,0,0" Height="82" Width="98" FontSize="48" Foreground="Black" FontFamily="Segoe UI Black" Grid.Column="1"/>
+        <Button x:Name="btn_exit" Content="X" Grid.Column="1" HorizontalAlignment="Left" Margin="345,0,0,0" VerticalAlignment="Top" Width="55" Height="50" Background="#FFB74B3A" BorderBrush="#FFBD3939" Click="Chiudi"/>
     </Grid>
 </Window>

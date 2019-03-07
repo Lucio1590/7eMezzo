@@ -23,6 +23,7 @@ namespace Sette_e_mezzo_Gruppo_1
         Giocatore [] _giocatori;
         Mazziere _mazziere;
         List<BitmapImage> _pathImages;
+        private int _puntataAttuale;
         public Tavolo()
         {
             PathImages= new List<BitmapImage>();
@@ -40,6 +41,7 @@ namespace Sette_e_mezzo_Gruppo_1
         }
         public Giocatore[] Giocatori1 { get => _giocatori; set => _giocatori = value; }
         public List<BitmapImage> PathImages { get => _pathImages; set => _pathImages = value; }
+        public int PuntataAttuale { get => _puntataAttuale; set => _puntataAttuale = value; }
 
         /// <summary>
         /// Metodo che viene richiamato con l'avvio di una nuova partita,
