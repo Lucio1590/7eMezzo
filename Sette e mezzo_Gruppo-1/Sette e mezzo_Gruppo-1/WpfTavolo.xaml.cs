@@ -59,12 +59,18 @@ namespace Sette_e_mezzo_Gruppo_1
         {
             if (!tavolo.AssegnaCartaAGiocatore(tavolo.Giocatori1[playerAttuale]))
             {
-                //((Image)FindName("G" + Convert.ToString(playerAttuale + 1) + "_CS")).Source = tavolo.Giocatori1[playerAttuale]._carte[0].PercorsoImmagineCarta;
+                if (cartaAttuale == 0)
+                {
+                    Uri u = new Uri(tavolo.Giocatori1[playerAttuale]._carte[0].PercorsoImmagineCarta, UriKind.Relative);
+                    BitmapImage b = new BitmapImage(u);
+                    ((Image)FindName("G" + Convert.ToString(playerAttuale + 1) + "_CS")).Source = b;
+                
                 if (playerAttuale == 10)
                 {
                     cartaAttuale++;
                 }
                 CercaProssimoGiocatore();
+                }
                 if (cartaAttuale==1 && !puntataCambiata)
                 {
                     int cont=1;
@@ -76,7 +82,6 @@ namespace Sette_e_mezzo_Gruppo_1
                         Puntata nuova = new Puntata(tavolo, playerAttuale);
                         nuova.ShowDialog();
                         ((TextBlock)FindName("G" + Convert.ToString(playerAttuale + 1) + "_Denaro")).Text = Convert.ToString(tavolo.Giocatori1[playerAttuale].Puntata);
-                        ((Label)FindName("G" + Convert.ToString(playerAttuale + 1) + "_Nick")).Content = tavolo.Giocatori1[playerAttuale].Nick;
                         CercaProssimoGiocatore();
                     }
                     while(cont!=nPlayers)
@@ -87,51 +92,40 @@ namespace Sette_e_mezzo_Gruppo_1
                             Puntata nuova = new Puntata(tavolo, playerAttuale);
                             nuova.ShowDialog();
                             ((TextBlock)FindName("G" + Convert.ToString(playerAttuale + 1) + "_Denaro")).Text = Convert.ToString(tavolo.Giocatori1[playerAttuale].Puntata);
-                            ((Label)FindName("G" + Convert.ToString(playerAttuale + 1) + "_Nick")).Content = tavolo.Giocatori1[playerAttuale].Nick;
                             cont = 1;
                         }
                         else
                         {
                             cont++;
                         }
+                    }
+                    playerAttuale = j;
+                }else if (puntataCambiata)
+                {
+                    if (tavolo.Giocatori1[playerAttuale].SforaLimite())
+                    {
+                        cartaAttuale = 1;
+                        MessageBox.Show("Hai sforato il limite");
+                        if (playerAttuale == 10)
+                        {
+                            Classifica nuova = new Classifica(tavolo);
+                            nuova.ShowDialog();
+                        }
+                        CercaProssimoGiocatore();
+                    }
+                    else
+                    {
+                        Uri u = new Uri(tavolo.Giocatori1[playerAttuale]._carte[cartaAttuale].PercorsoImmagineCarta, UriKind.Relative);
+                        BitmapImage b = new BitmapImage(u);
+                        ((Image)FindName("G" + Convert.ToString(playerAttuale + 1) + "_C" + cartaAttuale)).Source = b;
+                        cartaAttuale++;
                     }
                 }
             }
             else
             {
                 MessageBox.Show("Inserire Valore per Re di Denara");
-                if (playerAttuale == 10)
-                {
-                    cartaAttuale++;
-                }
-                CercaProssimoGiocatore();
-                if (cartaAttuale == 1 && !puntataCambiata)
-                {
-                    int cont = 1;
-                    puntataCambiata = true;
-                    int j = playerAttuale;
-                    Giocatore last = tavolo.Giocatori1[playerAttuale];
-                    for (int i = 0; i < nPlayers; i++)
-                    {
-                        Puntata nuova = new Puntata(tavolo, playerAttuale);
-                        nuova.ShowDialog();
-                        CercaProssimoGiocatore();
-                    }
-                    while (cont != nPlayers)
-                    {
-                        CercaProssimoGiocatore();
-                        if (tavolo.Giocatori1[playerAttuale].Puntata != last.Puntata)
-                        {
-                            Puntata nuova = new Puntata(tavolo, playerAttuale);
-                            nuova.ShowDialog();
-                            cont = 1;
-                        }
-                        else
-                        {
-                            cont++;
-                        }
-                    }
-                }
+                
             }
         }
 
@@ -161,7 +155,9 @@ namespace Sette_e_mezzo_Gruppo_1
             cartaAttuale = 1;
             if (playerAttuale == 10)
             {
+                tavolo.AssegnaVincita();
                 Classifica nuova = new Classifica(tavolo);
+                nuova.ShowDialog();
             }
         }
     }

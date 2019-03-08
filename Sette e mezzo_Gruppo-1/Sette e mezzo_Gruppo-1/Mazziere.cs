@@ -16,10 +16,13 @@ namespace Sette_e_mezzo_Gruppo_1
 {
     public class Mazziere : Giocatore
     {
-        new private List<Carta> _carte;
+        private List<Carta> _carteMazziere;
+
+        public List<Carta> CarteMazziere { get => _carteMazziere; set => _carteMazziere = value; }
+
         public Mazziere(string nick) : base(nick)
         {
-            _carte = new List<Carta>();
+            CarteMazziere = new List<Carta>();
             CostruisciListaCarte();
             //var shuffledcards = _carte.OrderBy(a => Guid.NewGuid()).ToList();
         }
@@ -30,15 +33,14 @@ namespace Sette_e_mezzo_Gruppo_1
             _carte = new List<Carta>();
             CostruisciListaCarte();
         }
-
-        public List<Carta> Carte { get => _carte; set => _carte = value; }
+        
 
         private void CostruisciListaCarte()
         {
             Carta.Segno segno = Carta.Segno.b;
             Carta carta;
             string segnoToString="b";
-            for (int i = 0; i < 40; i++)
+            for (int i = 1; i < 41; i++)
             {
                 switch (i)
                 {
@@ -55,16 +57,23 @@ namespace Sette_e_mezzo_Gruppo_1
                         segnoToString = "s";
                         break;
                 }
-                carta = new Carta(i, segno, "Carte/" + i.ToString() + segnoToString + ".png");
-                _carte.Add(carta);
+                if (i == 10)
+                {
+                    carta = new Carta(10, segno, "Carte/" + (10).ToString() + segnoToString + ".png");
+                }
+                else
+                {
+                    carta = new Carta(i%10, segno, "Carte/" + (i%10).ToString() + segnoToString + ".png");
+                }
+                CarteMazziere.Add(carta);
             }
         }
 
         public Carta DaiCarta()
         {
             Random r = new Random();
-            Carta c = Carte[r.Next(0,Carte.Count)];
-            Carte.Remove(c);
+            Carta c = CarteMazziere[r.Next(0,CarteMazziere.Count)];
+            CarteMazziere.Remove(c);
             return c;
         }
     }

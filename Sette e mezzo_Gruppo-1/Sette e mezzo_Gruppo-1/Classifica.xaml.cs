@@ -27,7 +27,10 @@ namespace Sette_e_mezzo_Gruppo_1
             List<Giocatore> giocat= tavolo.GetClassifica();
             foreach(Giocatore g in giocat)
             {
-                lbxClassifica.Items.Add(g);
+                if (g != null)
+                {
+                    lbxClassifica.Items.Add(g);
+                }
             }
         }
 

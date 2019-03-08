@@ -89,11 +89,21 @@ namespace Sette_e_mezzo_Gruppo_1
 
         public int CompareTo(Giocatore other)
         {
-            if(other.Puntata==this.Puntata)
+            if (other == null)
+            {
+                return 1;
+            }else if(this == null)
+            {
+                return -1;
+            }else if(this==null && other== null)
             {
                 return 0;
             }
-            else if(other.Puntata<this.Puntata)
+            if(other.Soldi==this.Soldi)
+            {
+                return 0;
+            }
+            else if(other.Soldi<this.Soldi)
             {
                 return -1;
             }
