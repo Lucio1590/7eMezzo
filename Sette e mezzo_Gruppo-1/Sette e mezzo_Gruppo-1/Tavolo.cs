@@ -73,6 +73,12 @@ namespace Sette_e_mezzo_Gruppo_1
             CambiaMazziere();
         }
         
+        public void AggiungiMazziere(Mazziere m)
+        {
+            Giocatori1[10] = m;
+            _mazziere = m;
+        }
+
         /// <summary>
         /// Metodo di rimozione di un giocatore
         /// </summary>

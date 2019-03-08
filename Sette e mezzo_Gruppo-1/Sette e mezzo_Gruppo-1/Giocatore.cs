@@ -20,12 +20,13 @@ namespace Sette_e_mezzo_Gruppo_1
         private int _soldi;
         private int _puntata;
         public double _reDiDenara;
-        public BitmapImage _avatar;
+        private BitmapImage avatar;
         public List<Carta> _carte;
         //proprietà utili nel cambio mazziere e nell'azzeramento della puntata
         public string Nick { get => _nick; set => _nick= value; }
         public int Soldi { get => _soldi; set => _soldi = value; }
         public int Puntata { get => _puntata; set => _puntata = value; }
+        public BitmapImage Avatar { get => avatar; set => avatar = value; }
 
         public Giocatore(string nick, int soldi = 100)
         {
@@ -79,6 +80,11 @@ namespace Sette_e_mezzo_Gruppo_1
                 }
             }
             return tot;
+        }
+
+        public override string ToString()
+        {
+            return Nick + "|" + Soldi;
         }
 
         public int CompareTo(Giocatore other)

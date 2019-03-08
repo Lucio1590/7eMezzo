@@ -42,14 +42,11 @@
         <TextBox x:Name="tbx_11" HorizontalAlignment="Left" Height="30" Margin="375,145,0,-93" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Grid.Row="4" Grid.ColumnSpan="2" TextChanged="AggiornaLista"/>
         <Button x:Name="btnClose" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="46" Grid.Column="1" Margin="503,0,0,0" Height="46" Background="Red" Click="Close"/>
         <Button x:Name="btnNuova" Content="Nuova partita" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195" Grid.Column="1" Margin="256,123,0,-97" Grid.Row="4" Height="56" Click="btnNuova_Click"/>
-        <ListBox x:Name="lbxAvatars_1" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="444,0,0,0">
-            <Image Source="Giocatori/user19.png"/>
-        </ListBox>
+        <ListBox x:Name="lbxAvatars_1" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="444,0,0,0"/>
         <ListBox x:Name="lbxAvatars_3" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="444,0,0,0" Grid.Row="2"/>
         <ListBox x:Name="lbxAvatars_2" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="444,0,0,0" Grid.Row="1"/>
         <ListBox x:Name="lbxAvatars_4" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="444,0,0,0" Grid.Row="3"/>
         <ListBox x:Name="lbxAvatars_5" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="444,1,0,-1" Grid.Row="4"/>
-        <ListBox x:Name="lbxAvatars_1_Copy4" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="417,0,0,0" Grid.Row="4" Grid.Column="1"/>
         <ListBox x:Name="lbxAvatars_6" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="390,0,0,0" Grid.Row="4" Grid.Column="1"/>
         <ListBox x:Name="lbxAvatars_7" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="390,0,0,0" Grid.Row="3" Grid.Column="1"/>
         <ListBox x:Name="lbxAvatars_8" HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="91" Margin="390,0,0,0" Grid.Row="2" Grid.Column="1"/>

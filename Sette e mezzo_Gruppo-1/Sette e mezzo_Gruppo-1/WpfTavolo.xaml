@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sette_e_mezzo_Gruppo_1"
         mc:Ignorable="d"
-        Title="Tavolo" Height="1000" Width="1900"  WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Tavolo" Height="976" Width="1771"  WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="Sfondo/background.png"/>
     </Window.Background>
-    <Grid HorizontalAlignment="Left" Width="1900" Height="1000" VerticalAlignment="Top" x:Name="GridGenerale">
+    <Grid HorizontalAlignment="Left" Width="1777" Height="979" VerticalAlignment="Top" x:Name="GridGenerale">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
@@ -59,7 +59,7 @@
             <Image x:Name="G1_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
             <Image x:Name="G1_C11" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
         </Grid>
-        <Button x:Name="btn_exit" Content="X" Grid.Column="2" HorizontalAlignment="Left" Margin="568,10,0,0" VerticalAlignment="Top" Width="55" Height="50" Background="#FFB74B3A" BorderBrush="#FFBD3939" Click="Chiudi"/>
+        <Button x:Name="btn_exit" Content="X" Grid.Column="2" HorizontalAlignment="Left" Margin="538,10,0,0" VerticalAlignment="Top" Width="55" Height="50" Background="#FFB74B3A" BorderBrush="#FFBD3939" Click="Chiudi"/>
         <Grid x:Name="G9" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Row="2" Grid.Column="2" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -176,8 +176,8 @@
         </Grid>
         <Grid x:Name="G7" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.Column="2" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -440,5 +440,7 @@
             <Image x:Name="G2_C9" Margin="425,5,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.Row="1"/>
             <Image x:Name="G2_C10" Margin="500,55,0,0" Source="Carte/null.png" HorizontalAlignment="Left" Width="70" Height="110" VerticalAlignment="Top" IsEnabled="True" Grid.RowSpan="2"/>
         </Grid>
+        <Button x:Name="btnEstrai" Content="Estrai Carta" Grid.Column="1" HorizontalAlignment="Left" Margin="10,117,0,0" Grid.Row="2" VerticalAlignment="Top" Width="293" Height="123" FontSize="48" Click="btnEstrai_Click"/>
+        <Button x:Name="btnLascia" Content="Lascia" Grid.Column="1" HorizontalAlignment="Left" Margin="309,112,0,0" Grid.Row="2" VerticalAlignment="Top" Width="293" Height="123" FontSize="48" Click="LAscia"/>
     </Grid>
 </Window>

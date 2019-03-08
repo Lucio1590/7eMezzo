@@ -32,9 +32,18 @@ namespace Sette_e_mezzo_Gruppo_1
             buttons = new List<Button>();
             for(int i=0; i<11; i++)
             {
-                foreach(BitmapImage bim in t.PathImages)
+                for (int j = 0; j < 21; j++)
                 {
-                    ((ListBox)FindName("lbxAvatars_" + Convert.ToString(i + 1))).Items.Add(bim);
+                    foreach (BitmapImage bim in t.PathImages)
+                    {
+
+                        Image imagine = new Image();
+                        Uri uuri = new Uri("Giocatori/user" + j + ".png", UriKind.Relative);
+                        BitmapImage bimg = new BitmapImage(uuri);
+                        imagine.Source = bimg;
+
+                        ((ListBox)FindName("lbxAvatars_" + Convert.ToString(i + 1))).Items.Add(imagine);
+                    }
                 }
             }
 
@@ -66,7 +75,6 @@ namespace Sette_e_mezzo_Gruppo_1
                     b.Content = "✚";
                     ((TextBox)this.FindName("tbx_" + pos)).Foreground = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF858585"));
                     ((TextBox)this.FindName("tbx_" + pos)).Text = "Nick...";
-                    buttons[pos - 1] = b;
                     n--;
                 }
             }
@@ -80,7 +88,8 @@ namespace Sette_e_mezzo_Gruppo_1
                     }
                     else
                     {
-                        Giocatore g = new Giocatore(testboxes[pos - 1].Text);
+                        Giocatore g = new Giocatore(((TextBox)this.FindName("tbx_" + pos)).Text);
+                        g.Avatar = ((ListBox)FindName("lbxAvatars_" + Convert.ToString(pos + 1))).SelectedItem as BitmapImage;
                         t.AggiungiGiocatore(g, pos);
                         ((ListBox)FindName("lbxAvatars_" + pos)).Visibility = Visibility.Hidden;
                         MessageBox.Show("Giocatore inserito con successo");
@@ -113,8 +122,10 @@ namespace Sette_e_mezzo_Gruppo_1
                 {
                     throw new Exception("Errore nell'inserimento del nome del mazziere");
                 }
+                Mazziere m = new Mazziere(tbx_11.Text);
+                t.AggiungiMazziere(m);
                 WpfTavolo nuova = new WpfTavolo(n,t);
-                nuova.Show();
+                nuova.ShowDialog();
             }
             catch(Exception ex)
             {
